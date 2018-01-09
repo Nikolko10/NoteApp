@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Century_Gothic';
+	src: url('fonts/LithosPro-Regular.eot');
+	src: local('☺'), url('CenturyGothic.woff') format('woff'), url('CenturyGothic.ttf') format('truetype'), url('CenturyGothic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_LithosPro-Regular';
+	src: url('fonts/LithosPro-Regular.eot');
+	src: local('☺'), url('LithosPro-Regular.woff') format('woff'), url('LithosPro-Regular.ttf') format('truetype'), url('LithosPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
