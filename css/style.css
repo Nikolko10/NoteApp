@@ -8,7 +8,6 @@ body {
 	position: relative;
 	padding: 0; 
 	margin: 0;
-	height: 100%;
 }
 
 html {
@@ -44,7 +43,6 @@ html {
 	width: 	100%;
 	border-radius: 8px;
 	padding: 10px;
-	margin-right: 15px;
 }
 
 .add {
@@ -56,8 +54,12 @@ html {
 }
 
 .image-element-class {
-	width: 25%;
-	margin-bottom: 10px;
+	width: 24.25%;
+	margin-bottom: 1%;
+}
+
+.gutter-sizer {
+	width: 1%;
 }
 
 .flex_center {
@@ -208,11 +210,25 @@ html {
 	cursor: pointer;
 }
 
-div > [class~="col-lg-3"]:nth-child(n+5) {
-  padding-top: 30px;
-}
-
 .row-flex {
     display: flex;
     flex-flow: row wrap;
+}
+
+@media (max-width: 1200px) {
+	.image-element-class {
+		width: 32.6666666%;
+	}
+}
+
+@media (max-width: 960px) {
+	.image-element-class {
+		width: 49.5%;
+	}
+}
+
+@media (max-width: 579px) {
+	.image-element-class {
+		width: 100%;
+	}
 }

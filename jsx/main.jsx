@@ -88,6 +88,7 @@ export default class App extends React.Component {
 		var arr = JSON.parse(localStorage.getItem('note'));
 		var clickIndex = index;
 		arr[index].imp = !prefer;
+
 		localStorage.setItem('note', JSON.stringify(arr));
 		this.setState({
 			note: JSON.parse(localStorage.getItem('note'))
@@ -96,14 +97,15 @@ export default class App extends React.Component {
 
 	getElementsNote() {
 		return this.state.note.map((item, i, arr) => 
-			<Note key={i} updateClickEdit={this.updateClickEdit} prefer={item.imp} setDataTime={this.setDataTime} dataTime={item.dataTime} text={item.text} title={item.title} index={i} update={this.updateText} delete={this.deleteBlock} length={arr.length}>
+			<Note key={i} updateClickEdit={this.updateClickEdit} prefer={item.imp} prepend={(index, prefer) => this.prependChosen(index, prefer)} setDataTime={this.setDataTime} dataTime={item.dataTime} text={item.text} title={item.title} index={i} update={this.updateText} delete={this.deleteBlock} length={arr.length}>
 		</Note>)
 	}
 
 	render() {
 		var masonryOptions = {
 			horizontalOrder: true,
-			itemSelector: '.image-element-class'
+			itemSelector: '.image-element-class',
+			gutter: '.gutter-sizer'
 		};
 
 		return <div>
@@ -115,6 +117,7 @@ export default class App extends React.Component {
 							<img onClick={this.addBlock}  src="images/Subtraction 1.png" />
 						</div>
 					</div>
+					<div className='gutter-sizer'></div>
 			</Masonry>
 		</div>
 	}
