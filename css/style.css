@@ -157,7 +157,7 @@ html {
 
 .note_style_edit .edit_text {
 	display: block;
-	text-align: left;
+	text-align: justify;
 }
 
 .note_style div.buttons button:first-child {

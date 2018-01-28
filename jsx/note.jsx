@@ -17,13 +17,14 @@ export default class Note extends React.Component {
 			stateLen: this.props.stateLen,
 			title: this.props.title,
 			length: this.props.length,
-			prefer: this.props.prefer
+			prefer: this.props.prefer,
+			git: this.props.name
 		}
 	}
 
 	handleClickIcon(prefer, index) {
 		this.setState({
-			prefer: !prefer
+			prefer: false
 		});
 		this.props.prepend(index, prefer);
 	}
@@ -43,8 +44,14 @@ export default class Note extends React.Component {
 		this.props.updateClickEdit()
 	}
 
+	getThis() {
+		this.setState({
+			prefer: !this.state.prefer
+		})
+	}
+
 	rendNorm() {
-		return <div className='flex'>
+		return <div className='flex' onClick={this.getThis.bind(this)}>
 					<div className='note_style_edit'>
 						<span>{this.props.title}</span>
 						<FontAwesome onClick={() => this.handleClickIcon(this.state.prefer, this.props.index)} className={this.state.prefer === false ? 'starPosition inactive' : 'starPosition active'} name={this.state.prefer === false ? 'star-o' : 'star'} />

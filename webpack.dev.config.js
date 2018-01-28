@@ -18,5 +18,5 @@ module.exports = {
         loaders: ['react-hot-loader/webpack', 'babel-loader?presets[]=react']
       }
     ]
-  },
+  }
 }
