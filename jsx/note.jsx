@@ -51,10 +51,10 @@ export default class Note extends React.Component {
 	}
 
 	rendNorm() {
-		return <div className='flex' onClick={this.getThis.bind(this)}>
+		return <div className='flex'>
 					<div className='note_style_edit'>
 						<span>{this.props.title}</span>
-						<FontAwesome onClick={() => this.handleClickIcon(this.state.prefer, this.props.index)} className={this.state.prefer === false ? 'starPosition inactive' : 'starPosition active'} name={this.state.prefer === false ? 'star-o' : 'star'} />
+						<FontAwesome onClick={() => {this.handleClickIcon(this.state.prefer, this.props.index); this.getThis()}} className={this.state.prefer === false ? 'starPosition inactive' : 'starPosition active'} name={this.state.prefer === false ? 'star-o' : 'star'} />
 						<span className='Century_Gothic edit_text'>{this.props.text}</span>
 						<p className='LithosPro_Regular'><strong>Date created: {this.props.dataTime}</strong></p>
 						<div className='buttons LithosPro_Regular'>
