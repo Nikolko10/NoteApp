@@ -1,2 +1,2 @@
 NoteApp
-![Image alt](https://github.com/Nikolko10/NoteApp/raw/master/image/Screenshot.png)
+![Image alt](https://github.com/Nikolko10/NoteApp/raw/master/images/Screenshot.png)
